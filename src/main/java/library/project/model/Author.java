@@ -15,7 +15,7 @@ import java.util.List;
 @SuperBuilder
 public class Author extends Creator {
 
-    @OneToMany(mappedBy = "writtenBy", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "writtenBy", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

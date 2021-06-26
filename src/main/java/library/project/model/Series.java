@@ -5,7 +5,9 @@ import lombok.*;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 @Entity
 @Data
@@ -19,9 +21,12 @@ public class Series {
 
     @NotBlank
     private String title;
-//
-//    @OneToMany(mappedBy = "series")
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    private Map<Integer, Book> booksInSeries;
+
+
+    private int inSeriesId;
+
+    @OneToMany(mappedBy = "series")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Set<Book> booksInSeries;
 }

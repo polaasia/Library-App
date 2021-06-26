@@ -25,22 +25,22 @@ public class AuthorsListController {
     mainWindowController.showView(view.getMainPanel());
     }
 
-    @PostConstruct
-    public void initListeners(){
-        view.getAuthorsList().addListSelectionListener(e -> {
+//    @PostConstruct
+//    public void initListeners(){
+//        view.getAuthorsList().addListSelectionListener(e -> {
+//
+//            Author selectedAuthor = (Author) view.getAuthorsList().getSelectedValue();
+//
+////            List<Book> books = bookService.getBooksByAuthor(selectedAuthor.getId());
+////            DefaultListModel<Book> model = (DefaultListModel<Book>) view.getBookList().getModel();
+////            model.removeAllElements();
+////            books.forEach(model :: addElement);
+////
+////            Book selectedBook = (Book) view.getBookList().getSelectedValue();
+//        });
+//
 
-            Author selectedAuthor = (Author) view.getAuthorsList().getSelectedValue();
-
-            List<Book> books = bookService.getBooksByAuthor(selectedAuthor.getId());
-            DefaultListModel<Book> model = (DefaultListModel<Book>) view.getBookList().getModel();
-            model.removeAllElements();
-            books.forEach(model :: addElement);
-
-            Book selectedBook = (Book) view.getBookList().getSelectedValue();
-        });
-
-
-    }
+//    }
 
     private void updateAuthors(){
         List<Author> authors = authorService.getAllAuthors();

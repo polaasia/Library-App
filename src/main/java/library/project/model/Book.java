@@ -27,14 +27,14 @@ public abstract class Book {
     private String title;
     private String language;
 
-//    @Qualifier
-//    private int inSeriesId;
-//
-//    @ManyToOne
-//    @JoinColumn(name = "series_id")
-//    @ToString.Exclude
-//    @EqualsAndHashCode.Exclude
-//    private Series series;
+
+    private int inSeriesId;
+
+    @ManyToOne
+    @JoinColumn(name = "series_id")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
+    private Series series;
 
     @ElementCollection
     @CollectionTable(name = "book_genres", joinColumns = @JoinColumn(name = "book_id"))

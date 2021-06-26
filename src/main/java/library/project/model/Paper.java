@@ -1,15 +1,10 @@
 package library.project.model;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -18,10 +13,10 @@ import javax.persistence.OneToOne;
 @SuperBuilder
 public class Paper extends Book{
 
-
-    public Room room;
-
-    @OneToOne
+    @OneToOne(cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "place_id")
+    @ToString.Exclude
+    @EqualsAndHashCode.Exclude
     public Place place;
 
 }
