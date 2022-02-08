@@ -14,6 +14,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "series")
 public class Series {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -12,6 +12,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(name = "place")
 public class Place {
 
     @Id
@@ -26,7 +27,7 @@ public class Place {
     @Min(0)
     public int shelfNumber;
 
-    @OneToMany(mappedBy = "place", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "place", cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

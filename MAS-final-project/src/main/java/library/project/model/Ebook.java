@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
@@ -12,6 +13,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @SuperBuilder
+@DiscriminatorValue("ebook")
+
 public class Ebook extends Book{
     public String fileType;
 }

@@ -29,5 +29,6 @@ public class MainWindowController {
         view.getContentPane().removeAll();
         view.getContentPane().add(viewToShow);
         view.revalidate();
+        view.repaint();
     }
 }

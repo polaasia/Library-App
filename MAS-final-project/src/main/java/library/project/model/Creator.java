@@ -9,29 +9,35 @@ import java.util.EnumSet;
 import java.util.List;
 
 @Entity
+@Table(name = "creator")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @SuperBuilder
+@AllArgsConstructor
 public class Creator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
     public Long id;
 
+    @Column(name = "firstName")
     public String firstName;
+    @Column(name = "lastName")
     public String lastName;
+    @Column(name = "penName")
     public String penName;
 
+    @Column(name = "creatorType")
    public CreatorType creatorType;
 
-    @OneToMany(mappedBy = "writtenBy", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "writtenBy", cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<Book> writtenBooks = new ArrayList<>();
 
-    @OneToMany(mappedBy = "illustratedBy", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "illustratedBy", cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

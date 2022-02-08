@@ -16,7 +16,7 @@ import java.util.Set;
 @AllArgsConstructor
 @SuperBuilder
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-
+@Table(name = "book")
 public abstract class Book {
 
     @Id

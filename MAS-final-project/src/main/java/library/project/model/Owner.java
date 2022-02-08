@@ -4,6 +4,7 @@ import lombok.*;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.CascadeType;
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.util.HashSet;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @SuperBuilder
+@DiscriminatorValue("owner")
 public class Owner extends User{
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.REMOVE)

@@ -25,6 +25,7 @@ public class AuthorsListController {
     public void showGUI(MainWindowController mainWindowController){
         updateAuthors();
     mainWindowController.showView(view.getMainPanel());
+
     }
 
     @PostConstruct
@@ -34,11 +35,18 @@ public class AuthorsListController {
            Creator selectedAuthor = (Creator) view.getAuthorsList().getSelectedValue();
 
            List<Book> books = bookService.getBooksByAuthor(selectedAuthor.getId());
-           DefaultTableModel model = (DefaultTableModel) books;
-//            model.removeAllElements();
-//            books.forEach(model :: addElement);
 
-//            Book selectedBook = (Book) view.getBookList().getSelectedValue();
+
+            DefaultListModel<Book> model = (DefaultListModel<Book>) view.getBookList().getModel();
+            model.removeAllElements();
+            books.forEach(model :: addElement);
+
+          //  DefaultTableModel model = (DefaultTableModel) books;
+
+           // model.removeAllElements();
+          //  books.forEach(model :: addElement);
+
+            Book selectedBook = (Book) view.getBookList().getSelectedValue();
         });
 
 
@@ -47,7 +55,8 @@ public class AuthorsListController {
     private void updateAuthors(){
         List<Creator> authors = authorService.getAllAuthors();
         DefaultListModel<Creator> model = (DefaultListModel<Creator>) view.getAuthorsList().getModel();
-        model.removeAllElements();
+       //model.removeAllElements();
         authors.forEach(model :: addElement);
+
     }
 }

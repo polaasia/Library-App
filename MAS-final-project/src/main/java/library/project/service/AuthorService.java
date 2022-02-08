@@ -16,7 +16,7 @@ public class AuthorService {
     private final CreatorRepository creatorRepository;
 
     public List<Creator> getAllAuthors() {
-        Iterable<Creator> allAuthors = creatorRepository.findAll();
+       Iterable<Creator> allAuthors = creatorRepository.findAll();
         List<Creator> res = new ArrayList<>();
         allAuthors.forEach(res :: add);
         return res;

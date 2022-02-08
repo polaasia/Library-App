@@ -16,7 +16,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @SuperBuilder
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@Table(uniqueConstraints = {@UniqueConstraint(columnNames = "name")})
+@Table(name = "user",uniqueConstraints = {@UniqueConstraint(columnNames = "name")})
+
 public abstract class User {
 
     @Id
