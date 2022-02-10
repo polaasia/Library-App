@@ -31,13 +31,13 @@ public class Creator {
     @Column(name = "creatorType")
    public CreatorType creatorType;
 
-    @OneToMany(mappedBy = "writtenBy", cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "writtenBy", cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private List<Book> writtenBooks = new ArrayList<>();
 
-    @OneToMany(mappedBy = "illustratedBy", cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "illustratedBy", cascade = CascadeType.REMOVE)
     @Builder.Default
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

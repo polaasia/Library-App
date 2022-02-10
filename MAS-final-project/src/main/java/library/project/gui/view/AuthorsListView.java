@@ -35,23 +35,16 @@ public class AuthorsListView {
         authorsList = new JList<Creator>();
         authorScroll = new JScrollPane(authorsList);
         authorsList.setCellRenderer(new AuthorListRender());
-        authorsList.setModel(new DefaultListModel<Creator>());
+        authorsList.setModel(new DefaultListModel());
+        authorsList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         authorsList.setFixedCellHeight(25);
 
         bookList = new JList<Book>();
         bookScroll = new JScrollPane(bookList);
         bookList.setCellRenderer(new BookListRender());
         bookList.setModel(new DefaultListModel<Book>());
+        bookList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         bookList.setFixedCellHeight(25);
-
-        //detailsTitle.setFont(ver);
-       /* private JLabel languageDetails;
-        private JLabel fileFormatDetails;
-        private JLabel seriesDetails;*/
-
-
-
-
 
     }
 

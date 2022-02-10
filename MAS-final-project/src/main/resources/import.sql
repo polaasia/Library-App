@@ -20,7 +20,7 @@ insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_I
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 4, 'english', 'Harry Potter and the Philosophers Stone', null, null, 0, 2, null );
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 5, 'english', 'Harry Potter and the Chamber of Secrets', null, null, 0, 2, null );
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 6, 'english', 'Harry Potter and the Prisoner of Azkaban', null, null, 0, 2, null );
-insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 7, 'english', 'THarry Potter and the Goblet of Fire', null, null, 0, 2, null );
+insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 7, 'english', 'Harry Potter and the Goblet of Fire', null, null, 0, 2, null );
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 8, 'english', 'Harry Potter and the Order of Phoenix', null, null, 0, 2, null );
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 9, 'english', 'Harry Potter and the Half-Blood Prince', null, null, 0, 2, null );
 insert into book(DTYPE,	ID,	LANGUAGE, TITLE, FILE_TYPE,	ILLUSTRATOR_ID, SERIES_ID, AUTHOR_ID, PLACE_ID) values ('ebook', 10, 'english', 'Harry Potter and the Deathly Hallows', null, null, 0, 2, null );
