@@ -17,4 +17,8 @@ import javax.persistence.Entity;
 
 public class Ebook extends Book{
     public String fileType;
+
+    public String toString(){
+        return "ebook";
+    }
 }

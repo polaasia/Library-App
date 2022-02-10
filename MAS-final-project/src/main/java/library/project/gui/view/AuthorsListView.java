@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
+import java.awt.*;
 
 @Component
 @Data
@@ -19,6 +20,15 @@ public class AuthorsListView {
     private JScrollPane authorScroll;
     private JScrollPane bookScroll;
     private JList bookList;
+    private JPanel bookDetailsPanel;
+    private JLabel bookTitle;
+    private JLabel language;
+    private JLabel fileFormat;
+    private JLabel series;
+    private JLabel detailsTitle;
+    private JLabel languageDetails;
+    private JLabel fileFormatDetails;
+    private JLabel seriesDetails;
 
 
     private void createUIComponents() {
@@ -26,13 +36,21 @@ public class AuthorsListView {
         authorScroll = new JScrollPane(authorsList);
         authorsList.setCellRenderer(new AuthorListRender());
         authorsList.setModel(new DefaultListModel<Creator>());
-        authorsList.setFixedCellHeight(20);
+        authorsList.setFixedCellHeight(25);
 
         bookList = new JList<Book>();
         bookScroll = new JScrollPane(bookList);
         bookList.setCellRenderer(new BookListRender());
         bookList.setModel(new DefaultListModel<Book>());
-        bookList.setFixedCellHeight(20);
+        bookList.setFixedCellHeight(25);
+
+        //detailsTitle.setFont(ver);
+       /* private JLabel languageDetails;
+        private JLabel fileFormatDetails;
+        private JLabel seriesDetails;*/
+
+
+
 
 
     }
@@ -69,6 +87,13 @@ public class AuthorsListView {
         public java.awt.Component getListCellRendererComponent(JList<? extends Book> list, Book value, int index, boolean isSelected, boolean cellHasFocus) {
             String name = value.getTitle();
             setText(name);
+            if (isSelected) {
+                setBackground(list.getSelectionBackground());
+                setForeground(list.getSelectionForeground());
+            } else {
+                setBackground(list.getBackground());
+                setForeground(list.getForeground());
+            }
             return this;
         }
     }

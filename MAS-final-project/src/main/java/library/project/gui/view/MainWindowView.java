@@ -12,7 +12,7 @@ public class MainWindowView extends JFrame {
 
     public MainWindowView() {
         setTitle("library system");
-        setSize(1200, 800);
+        setSize(1000, 800);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
 

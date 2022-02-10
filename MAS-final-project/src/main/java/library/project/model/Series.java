@@ -23,10 +23,14 @@ public class Series {
     @NotBlank
     private String title;
 
-    private int inSeriesId;
+   /* private int inSeriesId;*/
 
     @OneToMany(mappedBy = "series")
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
     private Set<Book> booksInSeries;
+
+    public String toString(){
+        return title;
+    }
 }
